@@ -6,23 +6,39 @@
 
 //https://reactnavigation.org/docs/getting-started/
 //Instalar as abas de navegação - expo install react-native-screens react-native-safe-area-context
-import { StatusBar } from 'expo-status-bar';
+import { StatusBar } from 'react-native';
+import { 
+  useFonts,
+  Inter_400Regular,
+  Inter_600SemiBold,
+  Inter_700Bold,
+  Inter_900Black
+} from '@expo-google-fonts/inter';
+
 import { StyleSheet, Text, View } from 'react-native';
+import { Background } from './src/components/Background';
+import { Home } from './src/screens/Home';
+import { Loading } from './src/components/Loading';
 
 export default function App() {
+  const [fontsLoade] = useFonts({
+    Inter_400Regular,
+    Inter_600SemiBold,
+    Inter_700Bold,
+    Inter_900Black
+  });
+
   return (
-    <View style={styles.container}>
-      <Text>Hoje é dia D !</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Background>
+        <StatusBar
+         barStyle="light-content"
+         backgroundColor="transparent"
+         translucent
+         /> 
+         {fontsLoade ? <Home/> : <Loading/>}
+
+    </Background>
   );
+
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
