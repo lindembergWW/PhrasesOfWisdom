@@ -5,6 +5,7 @@ import { styles } from './styles';
 import { THEME  } from '../../theme';
 
 export function Home() {
+  
   return (
     <View style={styles.container}>
       <Image source={Logo} style={styles.logo} />
