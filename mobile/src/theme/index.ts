@@ -11,9 +11,12 @@ export const THEME = {
   
       SHAPE: '#2A2634',
   
-      PRIMARY: '#8B5CF6',
+      PRIMARY: '#0B4C59',
       SUCCESS: '#34D399',
       ALERT: '#F87171',
+      
+      OPACITY: '#FFF2',
+      BORDER: '#FFFFFF',
   
       FOOTER: ['rgba(0,0,0,0)', 'rgba(0,0,0,0.9)'],
       OVERLAY: 'rgba(0,0,0,0.6)',
