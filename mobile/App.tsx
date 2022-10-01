@@ -36,7 +36,7 @@ export default function App() {
          backgroundColor="transparent"
          translucent
          /> 
-         {/* {fontsLoade ? <Login/> : <Loading/>} */}
+        {/* {fontsLoade ? <Login/> : <Loading/>} */}
         {fontsLoade ? <Home/> : <Loading/>}
     </Background>
   );

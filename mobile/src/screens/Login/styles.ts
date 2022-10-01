@@ -8,12 +8,6 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 32,
     },
-    logo: {
-        width: 180,
-        height: 180,
-        resizeMode: 'contain',
-        marginTop: 74,
-    },
     btnLogin:{
         justifyContent: 'center',
         alignItems: 'center',
