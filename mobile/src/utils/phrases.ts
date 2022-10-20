@@ -1,4 +1,4 @@
-export const PHRASES = [
+export const phrases = [
   {
     "id": 1,
     "autor": "Duke Ellington",
