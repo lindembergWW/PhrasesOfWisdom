@@ -35,5 +35,3 @@ export function Home() {
     </Background>
   );
 }
-
-//marcoa@inovacaobrain.com.br
