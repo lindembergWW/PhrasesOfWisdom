@@ -6,7 +6,7 @@
 
 //https://reactnavigation.org/docs/getting-started/
 //Instalar as abas de navegação - expo install react-native-screens react-native-safe-area-context
-import { StatusBar } from 'react-native';
+
 import { 
   useFonts,
   Inter_400Regular,
@@ -16,10 +16,13 @@ import {
 } from '@expo-google-fonts/inter';
 
 import { StyleSheet, Text, View } from 'react-native';
-import { Background } from './src/components/Background';
+
 import { Home } from './src/screens/Home';
 import { Login } from './src/screens/Login';
 import { Loading } from './src/components/Loading';
+
+import {Routes}  from "./src/routes/index";
+
 
 export default function App() {
   const [fontsLoade] = useFonts({
@@ -30,16 +33,16 @@ export default function App() {
   });
 
   return (
-    <Background>
-        <StatusBar
-         barStyle="light-content"
-         backgroundColor="transparent"
-         translucent
-         /> 
-        {/* {fontsLoade ? <Login/> : <Loading/>} */}
-        {fontsLoade ? <Home/> : <Loading/>}
-    </Background>
+    
+        
+
+        fontsLoade ? <Routes /> : <Loading/>
+
+    
   );
 
 }
+
+{/* {fontsLoade ? <Login /> : <Loading/>} */}
+{/* {fontsLoade ? <Home/> : <Loading/>} */}
 
